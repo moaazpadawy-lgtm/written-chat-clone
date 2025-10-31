@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  background: black;
+  color: #00ff99;
+  font-family: "Cairo", sans-serif;
+  text-align: center;
+}
+
+.join-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.primary-btn {
+  background-color: #00ff99;
+  color: black;
+}
+
+.secondary-btn {
+  background-color: black;
+  color: #00ff99;
+  border: 2px solid #00ff99;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #00ff99;
+  border-radius: 8px;
+  background: transparent;
+  color: #00ff99;
+  width: 80%;
+  margin: 8px;
+}
+
+button:hover {
+  opacity: 0.8;
+}

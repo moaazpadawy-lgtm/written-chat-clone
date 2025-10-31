@@ -1,0 +1,251 @@
+/* ================================================== */
+/* 🔥 LAMMETNA STYLE - Black & Neon Green Edition */
+/* ================================================== */
+
+:root {
+    --bg: #000; /* خلفية سوداء */
+    --card: rgba(255,255,255,0.05);
+    --muted: #9ea2a8;
+    --primary: #39ff14; /* فوسفوري */
+    --secondary-button: #000; /* أسود */
+    --accent-soft: rgba(57,255,20,0.15);
+    --bubble-other: #101010;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html, #root {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color: #e8e8e8;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+/* ===== شاشة الدخول ===== */
+.join-screen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: transparent;
+}
+
+/* فيديو الخلفية */
+.background-video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+/* كارت اللوجو */
+.logo-container {
+    z-index: 10;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    max-width: 90%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(57,255,20,0.3);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 25px rgba(57,255,20,0.2);
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    object-fit: contain;
+}
+
+/* كارت الدخول */
+.auth-card-wrapper {
+    z-index: 10;
+    width: 340px;
+    max-width: 90%;
+    margin-top: 30px;
+}
+
+.join-form {
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.join-form p {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+
+/* أزرار الدخول والتسجيل */
+.auth-buttons-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+/* الشكل العام لكل الأزرار */
+.join-button {
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    flex: 1;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+/* 🔹 زر إنشاء حساب (فوسفوري بخلفية فوسفورية وكتابة سوداء) */
+.primary-btn {
+    background: var(--primary);
+    color: var(--secondary-button);
+    border: 1px solid #37ff00;
+}
+.primary-btn:hover {
+    background: #000000;
+    color: #00ff1e;;
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(57,255,20,0.3);
+}
+
+/* 🔹 زر تسجيل الدخول (أسود بخلفية سوداء وكتابة فوسفورية) */
+.secondary-btn {
+    background: var(--secondary-button);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.secondary-btn:hover {
+    background: #111;
+    color: #76ff47;
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(57,255,20,0.4);
+}
+
+/* ===== المدخلات ===== */
+.join-form input {
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 100%;
+    background: #111;
+    color: #eee;
+}
+
+/* روابط وملاحظات */
+.back-link {
+    font-size: 13px;
+    color: var(--primary);
+    text-decoration: none;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.hint {
+    z-index: 10;
+    margin-top: 12px;
+    color: #ccc;
+}
+
+/* ===== الشات ===== */
+.chat-screen { display: flex; height: 100%; }
+.sidebar {
+    width: 280px;
+    background: #0a0a0a;
+    padding: 18px;
+    border-right: 1px solid #111;
+}
+.sidebar h2 { margin: 0 0 8px 0; color: var(--primary); }
+.sidebar h3 { margin: 16px 0 8px 0; font-size: 13px; color: var(--muted); }
+.sidebar li { padding: 8px 6px; border-radius: 8px; margin-bottom: 6px; color: #ccc; }
+
+.main { flex: 1; display: flex; flex-direction: column; background: #000; }
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    border-bottom: 1px solid #111;
+    background: rgba(0,0,0,0.8);
+}
+.room-title { font-weight: 700; font-size: 18px; color: var(--primary); }
+
+.messages {
+    flex: 1;
+    padding: 20px 28px;
+    overflow: auto;
+    background: #000;
+}
+.messages-inner { max-width: 880px; margin: 0 auto; }
+
+.msg { margin-bottom: 8px; display: block; max-width: 78%; }
+.msg.mine { margin-left: auto; text-align: right; }
+
+.msg .text {
+    background: #111;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 15px;
+    color: #eee;
+}
+.msg.mine .text {
+    background: linear-gradient(180deg,var(--primary),#1bff00);
+    color: #000;
+}
+
+.message-form {
+    display: flex;
+    padding: 14px;
+    border-top: 1px solid #111;
+    background: #000;
+}
+.message-form input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 12px;
+    font-size: 15px;
+    background: #111;
+    color: #fff;
+}
+.message-form button {
+    padding: 12px;
+    margin-left: 12px;
+    border-radius: 12px;
+    border: 0;
+    background: var(--primary);
+    color: #000;
+    font-weight: 600;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    .auth-buttons-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
