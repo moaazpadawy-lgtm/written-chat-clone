@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo-transparent.png";
+import bgVideo from "../assets/1031.mp4";
 
 export default function Join() {
   const [username, setUsername] = useState("");
@@ -43,6 +44,10 @@ export default function Join() {
 
   return (
     <div className="join-screen">
+      <video autoPlay loop muted className="background-video">
+        <source src={bgVideo} type="video/mp4" />
+      </video>
+
       <div className="logo-container">
         <img src={logo} alt="LAMMETNA" className="logo" />
       </div>
